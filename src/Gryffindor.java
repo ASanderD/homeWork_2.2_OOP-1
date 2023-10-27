@@ -35,15 +35,12 @@ public class Gryffindor extends Hogwarts {
         this.bravery = bravery;
     }
 
+
     //метод toString
     @Override
     public String toString() {
         return
-                "Студент Гриффиндор Имя: " + getName()
-                        + ", Фамилия: " + getSurname()
-                        + ", Факультет: " + getFaculty()
-                        + ", Сила магии: " + getSpellPower()
-                        + ", Расстояние трансгрессии: " + getTransgress()
+                "Студент Гриффиндор"+ super.toString()
                         + ", Благородство: " + nobility
                         + ", Честь: " + honor
                         + ", Храбрость: " + bravery;

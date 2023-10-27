@@ -58,7 +58,7 @@ public class Hogwarts {
     @Override
     public String toString() {
         return
-                "Студент Хогвартс Имя: " + name
+                " Имя: " + name
                         + ", Фамилия: " + surname
                         + ", Факультет: " + faculty
                         + ", Сила магии: " + spellPower

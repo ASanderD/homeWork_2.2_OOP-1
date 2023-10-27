@@ -59,11 +59,7 @@ public class Slytherin extends Hogwarts {
     @Override
     public String toString() {
         return
-                "Студент Слизерин Имя: " + getName()
-                        + ", Фамилия: " + getSurname()
-                        + ", Факультет: " + getFaculty()
-                        + ", Сила магии: " + getSpellPower()
-                        + ", Расстояние трансгрессии: " + getTransgress()
+                "Студент Слизерин Имя: " + super.toString()
                         + ", хитрость: " + cunnning
                         + ", решительность: " + determination
                         + ", амбициозность: " + ambition
