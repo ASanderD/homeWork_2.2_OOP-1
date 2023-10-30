@@ -1,12 +1,12 @@
-public class Slytherin extends Hogwarts {
+public class SlytherinStudent extends HogwartsStudent {
     private int cunnning;
     private int determination;
     private int ambition;
     private int resourcefulness;
     private int lustForPower;
 
-    public Slytherin(String name, String surname, String faculty, int spellPower, int transgress, int cunnning, int determination, int ambition, int resourcefulness, int lustForPower) {//конструктор объектов типа Slytherin
-        super(name, surname, faculty, spellPower, transgress);
+    public SlytherinStudent(String student, int spellPower, int transgress, int cunnning, int determination, int ambition, int resourcefulness, int lustForPower) {//конструктор объектов типа SlytherinStudent
+        super(student, spellPower, transgress);
         this.cunnning = cunnning;
         this.determination = determination;
         this.ambition = ambition;
@@ -53,6 +53,24 @@ public class Slytherin extends Hogwarts {
 
     public void setLustForPower(int lustForPower) {
         this.lustForPower = lustForPower;
+    }
+
+    public int sumOfPropertiesOfStudents() {
+        return cunnning + determination + ambition + resourcefulness + lustForPower;
+    }
+
+    public void compareStudentsOfSlitherin(SlytherinStudent slytherinStudent) {
+        int sumPropertiesOfFirstStudent = this.sumOfPropertiesOfStudents();
+        int sumPropertiesOfSecondStudent = slytherinStudent.sumOfPropertiesOfStudents();
+        System.out.println("Сумма баллов 1 студента равна: " + sumPropertiesOfFirstStudent);
+        System.out.println("Сумма баллов 2 студента равна: " + sumPropertiesOfSecondStudent);
+        if (sumPropertiesOfFirstStudent > sumPropertiesOfSecondStudent) {
+            System.out.println(getStudent() + " лучший Слизеринец, чем " + slytherinStudent.getStudent());
+        } else if (sumPropertiesOfFirstStudent < sumPropertiesOfSecondStudent) {
+            System.out.println(slytherinStudent.getStudent() + " лучший Слизеринец, чем " + getStudent());
+        } else {
+            System.out.println(slytherinStudent.getStudent() + " равен " + getStudent());
+        }
     }
 
     //метод toString
